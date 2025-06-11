@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import ContactCard from './ContactCard';
 import SearchBar from './SearchBar';
 import CategoryFilter from './CategoryFilter';
@@ -61,7 +61,7 @@ const Directory = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-primary text-primary-foreground py-8 px-4">
+      <div className="bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground py-8 px-4 shadow-lg">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-2">
             Gautam Buddha University Directory
@@ -73,7 +73,7 @@ const Directory = () => {
       </div>
 
       {/* Search and Filter Section */}
-      <div className="bg-card border-b px-4 py-6">
+      <div className="bg-card border-b px-4 py-6 shadow-sm">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <SearchBar 
@@ -115,7 +115,7 @@ const Directory = () => {
               if (!categoryContacts || categoryContacts.length === 0) return null;
 
               return (
-                <div key={category} className="bg-card rounded-lg border overflow-hidden">
+                <div key={category} className="bg-card rounded-lg border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   {/* Category Header */}
                   <button
                     onClick={() => toggleCategory(category)}

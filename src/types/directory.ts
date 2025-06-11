@@ -6,7 +6,6 @@ export interface Contact {
   name: string;
   designation: string;
   department: string;
-  email: string;
   phone: string;
   office?: string;
   category: Category;
